@@ -22,7 +22,7 @@ public class FizzBuzz {
     }
 
     List<String> entries = new ArrayList<>();
-    IntStream.range(1, maxNumber).forEach(number -> entries.add(getValue(number)));
+    IntStream.range(1, maxNumber + 1).forEach(number -> entries.add(getValue(number)));
     return entries;
   }
 

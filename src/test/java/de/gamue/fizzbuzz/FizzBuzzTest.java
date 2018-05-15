@@ -37,7 +37,7 @@ class FizzBuzzTest {
     expected.add("14");
     expected.add("fizzbuzz");
 
-    List<String> result = FizzBuzz.getEntries(expected.size() + 1);
+    List<String> result = FizzBuzz.getEntries(15);
 
     Assertions.assertEquals(expected, result);
   }
