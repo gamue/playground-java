@@ -1,5 +1,8 @@
 package de.gamue.fizzbuzz;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,12 +13,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/fizzbuzz")
+@Api(description = "The well-known fizz buzz word game", tags = {"FizzBuzz"})
 public class FizzBuzzController {
 
   @RequestMapping(method = RequestMethod.POST,
       produces = "application/json;charset=UTF-8")
   @ResponseBody
-  public List<String> execute(@RequestHeader int maxNumber) {
+  @ApiOperation(value = "Execute the logic")
+  public List<String> execute(@RequestHeader @ApiParam(value = "The maximum number") int maxNumber) {
     return FizzBuzz.getEntries(maxNumber);
   }
 }
