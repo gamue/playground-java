@@ -1,4 +1,19 @@
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.2.RELEASE")
+  }
+}
+
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+  baseName = 'playground'
+}
 
 group 'de.gamue'
 version '1.0-SNAPSHOT'
@@ -10,6 +25,7 @@ repositories {
 }
 
 dependencies {
+  compile 'org.springframework.boot:spring-boot-starter-web:2.0.2.RELEASE'
   testCompile 'org.junit.jupiter:junit-jupiter-api:5.2.0'
   testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
 }
