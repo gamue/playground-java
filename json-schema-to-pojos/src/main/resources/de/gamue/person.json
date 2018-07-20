@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Person object",
+  "javaType": "de.gamue.api.Person",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "name",
+    "age"
+  ]
+}
