@@ -1,19 +1,21 @@
 apply plugin: 'jsonschema2pojo'
+apply plugin: 'com.github.ben-manes.versions'
 
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
 
     dependencies {
-        classpath 'org.jsonschema2pojo:jsonschema2pojo-gradle-plugin:0.5.1'
+        classpath 'org.jsonschema2pojo:jsonschema2pojo-gradle-plugin:1.0.0'
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.20.0'
     }
 }
 
 dependencies {
-    compile 'javax.validation:validation-api:1.1.0.CR2'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.8'
-    compile 'org.apache.commons:commons-lang3:3.7'
+    compile 'javax.validation:validation-api:2.0.1.Final'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
 
     testCompile "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
     testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
@@ -24,5 +26,6 @@ jsonSchema2Pojo {
     targetDirectory = file("${project.buildDir}/generated/source")
     includeJsr303Annotations = true
     includeAdditionalProperties = false
-    useCommonsLang3 = true
+    includeHashcodeAndEquals = true
+    includeToString = true
 }
