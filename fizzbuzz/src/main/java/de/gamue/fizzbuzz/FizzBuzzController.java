@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(description = "The well-known fizz buzz word game", tags = {"FizzBuzz"})
 public class FizzBuzzController {
 
-    @PostMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     @ApiOperation(value = "Execute the logic")
     public List<String> execute(@RequestHeader @ApiParam(value = "The maximum number") int maxNumber) {
