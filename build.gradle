@@ -23,7 +23,7 @@ subprojects {
 
 ext {
     junitVersion = '5.9.1'
-    springBootVersion = '2.2.13.RELEASE'
+    springBootVersion = '2.5.9'
     swaggerVersion = '2.9.2'
 }
 
