@@ -1,15 +1,15 @@
 package de.gamue;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import springfox.documentation.annotations.ApiIgnore;
 
 @SpringBootApplication
 @RestController
-@ApiIgnore("Dummy API which shouldn't be part of the documentation.")
+@Hidden
 public class Application {
 
   public static void main(String[] args) {
