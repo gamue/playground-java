@@ -3,13 +3,11 @@ plugins {
 }
 
 dependencies {
-    val junitVersion = "5.9.1"
-
     implementation("javax.validation:validation-api:2.0.1.Final")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.9.8")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${Versions.junit}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${Versions.junit}")
 }
 
 jsonSchema2Pojo {

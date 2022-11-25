@@ -6,13 +6,12 @@ plugins {
 dependencies {
     val springBootVersion = "2.7.5"
     val swaggerVersion = "2.10.5"
-    val junitVersion = "5.9.1"
 
     implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     implementation("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
     testImplementation("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${Versions.junit}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${Versions.junit}")
     implementation("io.springfox:springfox-swagger2:${swaggerVersion}")
     implementation("io.springfox:springfox-swagger-ui:${swaggerVersion}")
 }
