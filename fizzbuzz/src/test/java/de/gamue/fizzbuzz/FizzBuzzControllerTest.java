@@ -44,6 +44,6 @@ public class FizzBuzzControllerTest {
     headers.set("maxNumber", "-10");
     HttpEntity<String> entity = new HttpEntity<>(null, headers);
     ResponseEntity<Object> exchange = restTemplate.exchange("/fizzbuzz", HttpMethod.POST, entity, Object.class);
-    Assertions.assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, exchange.getStatusCode());
+    Assertions.assertEquals(HttpStatus.BAD_REQUEST, exchange.getStatusCode());
   }
 }
