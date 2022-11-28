@@ -29,6 +29,9 @@ public class FizzBuzzController {
 
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
-    public void handleException(IllegalArgumentException e){
+    public ErrorResponse handleException(IllegalArgumentException e){
+        ErrorResponse response = new ErrorResponse();
+        response.setMessage(e.getMessage());
+        return response;
     }
 }
