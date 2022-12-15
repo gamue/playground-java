@@ -18,3 +18,10 @@ jsonSchema2Pojo {
     includeHashcodeAndEquals.set(true)
     includeToString.set(true)
 }
+
+spotless {
+    java {
+        targetExclude( "build")
+        target("src/**/*.java")
+    }
+}

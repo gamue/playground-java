@@ -1,5 +1,6 @@
 plugins {
     java
+    id("com.diffplug.spotless") version "6.12.0"
 }
 subprojects {
     group = "de.gamue"
@@ -7,6 +8,7 @@ subprojects {
 
     apply {
         plugin("java")
+        plugin("com.diffplug.spotless")
     }
 
     repositories {
@@ -20,6 +22,14 @@ subprojects {
 
     tasks.withType<Test>  {
         useJUnitPlatform()
+    }
+
+    spotless {
+        java {
+            importOrder()
+            removeUnusedImports()
+            googleJavaFormat("1.15.0")
+        }
     }
 }
 
