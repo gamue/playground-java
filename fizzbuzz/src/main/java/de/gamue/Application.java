@@ -16,7 +16,9 @@ public class Application {
     SpringApplication.run(Application.class, args);
   }
 
-  @RequestMapping(value = "/", method = {RequestMethod.POST, RequestMethod.GET})
+  @RequestMapping(
+      value = "/",
+      method = {RequestMethod.POST, RequestMethod.GET})
   public String home() {
     return "Welcome to the playground";
   }
