@@ -5,7 +5,7 @@ plugins {
 
 dependencies {
     val springBootVersion = "2.7.5"
-    val openApiVersion = "1.6.13"
+    val openApiVersion = "1.6.14"
 
     implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     implementation("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
