@@ -1,10 +1,10 @@
 plugins {
-    id("org.springframework.boot") version "2.7.5"
+    id("org.springframework.boot") version "3.0.1"
     id("com.github.ben-manes.versions") version "0.44.0"
 }
 
 dependencies {
-    val springBootVersion = "2.7.5"
+    val springBootVersion = "3.0.1"
     val openApiVersion = "1.6.14"
 
     implementation("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
