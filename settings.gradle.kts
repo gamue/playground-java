@@ -1,4 +1,3 @@
 rootProject.name = "playground"
 
-include("fizzbuzz")
-include("json-schema-to-pojos")
+include("fizzbuzz", "json-schema-to-pojos")

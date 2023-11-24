@@ -10,8 +10,8 @@ import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
-import org.springdoc.core.SpringDocAnnotationsUtils;
-import org.springdoc.core.customizers.OpenApiCustomiser;
+import org.springdoc.core.customizers.OpenApiCustomizer;
+import org.springdoc.core.utils.SpringDocAnnotationsUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -30,7 +30,7 @@ public class OpenApiConfig {
   }
 
   @Bean
-  public OpenApiCustomiser customerGlobalHeaderOpenApiCustomiser(OpenAPI api) {
+  public OpenApiCustomizer customerGlobalHeaderOpenApiCustomiser(OpenAPI api) {
     return openApi -> {
       openApi
           .getPaths()
