@@ -1,3 +1,3 @@
 object Versions {
-    const val junit = "5.9.1"
+    const val junit = "5.10.1"
 }

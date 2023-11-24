@@ -1,6 +1,6 @@
 plugins {
     java
-    id("com.diffplug.spotless") version "6.12.0"
+    id("com.diffplug.spotless") version "6.22.0"
 }
 subprojects {
     group = "de.gamue"
@@ -28,7 +28,7 @@ subprojects {
         java {
             importOrder()
             removeUnusedImports()
-            googleJavaFormat("1.15.0")
+            googleJavaFormat("1.17.0")
         }
     }
 }
